@@ -15,7 +15,7 @@ BOOTLOADER = caterina
 #### own configuration
 COMMAND_ENABLE = no # override of Levinson default
 
-RGBLIGHT_ENABLE = yes
-BACKLIGHT_ENABLE = yes
+RGBLIGHT_ENABLE = no
+BACKLIGHT_ENABLE = no
 
 AUTO_SHIFT_ENABLE = yes

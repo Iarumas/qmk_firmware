@@ -24,16 +24,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #define USE_I2C
 
 /* Select hand configuration */
-#define MASTER_RIGHT
+#define MASTER_LEFT
+// #define MASTER_RIGHT
 // #define EE_HANDS
 
 //* Auto Shift Config
-#define AUTO_SHIFT_TIMEOUT 120
+#define AUTO_SHIFT_TIMEOUT 135
 #define NO_AUTO_SHIFT_SPECIAL
 #define NO_AUTO_SHIFT_NUMERIC
 
 //* Space Cadet Config
-#define LSPO_KEYS KC_LSFT, KC_LSFT, KC_8
-#define RSPC_KEYS KC_RSFT, KC_RSFT, KC_9
+// #define LSPO_KEYS KC_LSFT, KC_LSFT, KC_8
+// #define RSPC_KEYS KC_RSFT, KC_RSFT, KC_9
 
 #define RGBLIGHT_SPLIT

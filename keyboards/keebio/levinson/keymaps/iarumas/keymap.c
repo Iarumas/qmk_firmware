@@ -28,7 +28,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { \
   KC_ESC,                 NEO_LEFT_01,                                 NEO_RIGHT_01,                 NE_SS, \
   MO(SYM),                NEO_LEFT_02,                                 NEO_RIGHT_02,                 LT(SYM,NE_Y), \
   KC_LSPO,                NEO_LEFT_03,                                 NEO_RIGHT_03,                 KC_RSPC, \
-  KC_LCTRL, KC_LGUI, KC_LALT, MO(FUN), MO(NUM), KC_SPC,  KC_SPC,  MO(NUM), MO(FUN), KC_RALT, KC_RGUI, KC_RCTRL \
+  KC_LCTRL, KC_LGUI, KC_LALT, KC_SPC, LT(FUN,KC_SPC), LT(NUM,KC_SPC), LT(NUM,KC_SPC), LT(FUN,KC_SPC), KC_SPC,  KC_RALT, KC_RGUI, KC_RCTRL \
 ),
 
 
