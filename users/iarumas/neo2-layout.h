@@ -2,7 +2,7 @@
 #ifndef NEO2_LAYOUT_H
 #define NEO2_LAYOUT_H
 
-#include "keymap_neo2.h"
+//#include "keymap_neo2.h"
 #include "keymap_german.h"
 #include "neo2-keycodes.h"
 
@@ -15,12 +15,12 @@
      * │ ü │ ö │ ä │ p │ z │		│ b │ m │ , │ . │ j │
      * └───┴───┴───┴───┴───┘		└───┴───┴───┴───┴───┘
      */
-#define NEO_LEFT_01		NE_X,		NE_V,		NE_L,		NE_C,		NE_W
-#define NEO_LEFT_02		NE_U,		NE_I,		NE_A,		NE_E,		NE_O
-#define NEO_LEFT_03		NE_UDIA, 	NE_ODIA, 	NE_ADIA,	NE_P,		NE_Z
-#define NEO_RIGHT_01	NE_K,		NE_H,		NE_G,		NE_F,		NE_Q
-#define NEO_RIGHT_02 	NE_S,		NE_N,		NE_R,		NE_T,		NE_D
-#define NEO_RIGHT_03	NE_B,		NE_M,		NE_COMM,	NE_DOT,		NE_J
+#define NEO_LEFT_01		KC_X,		KC_V,		KC_L,		KC_C,		KC_W
+#define NEO_LEFT_02		KC_U,		KC_I,		KC_A,		KC_E,		KC_O
+#define NEO_LEFT_03		N_UE, 	N_OE, 	N_AE, 	KC_P,		KC_Y 
+#define NEO_RIGHT_01	KC_K,		KC_H,		KC_G,		KC_F,		KC_Q
+#define NEO_RIGHT_02 	KC_S,		KC_N,		KC_R,		KC_T,		KC_D
+#define NEO_RIGHT_03	KC_B,		KC_M,		KC_COMM,	KC_DOT,		KC_J
 
 
     /*
@@ -36,9 +36,8 @@
 #define SYM_LEFT_02  N_BSLS,  N_SLSH,  N_LCUBR, N_RCUBR, N_ASTR
 #define SYM_LEFT_03  N_HASH,  N_DLR,   N_PIPE,  N_TILD,  N_GRAVE
 #define SYM_RIGHT_01 N_EXKL,  N_LT,    N_GT,    N_EQ,    N_AMP
-#define SYM_RIGHT_02 N_QUES,  N_LPARN, N_RPARN, N_MINS,  N_AT
+#define SYM_RIGHT_02 N_QUES,  N_LPARN, N_RPARN, N_MINS,  N_COLN
 #define SYM_RIGHT_03 N_PLUS,  N_PERC,  N_QUOT,  N_SING,  N_DEGRE
-
 
     /*
      * ┌───┬───┬───┬───┬───┐		┌───┬───┬───┬───┬───┐
