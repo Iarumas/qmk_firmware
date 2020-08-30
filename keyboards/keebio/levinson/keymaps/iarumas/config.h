@@ -33,8 +33,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define NO_AUTO_SHIFT_SPECIAL
 #define NO_AUTO_SHIFT_NUMERIC
 
+//* Tap-Mod Configuration
+#define TAPPING_TERM 155
+
 //* Space Cadet Config
-// #define LSPO_KEYS KC_LSFT, KC_LSFT, KC_8
-// #define RSPC_KEYS KC_RSFT, KC_RSFT, KC_9
+#define LSPO_KEYS KC_LSFT, KC_LSFT, KC_8
+#define RSPC_KEYS KC_RSFT, KC_RSFT, KC_9
 
 #define RGBLIGHT_SPLIT
