@@ -37,7 +37,7 @@
 #define SYM_LEFT_03  N_HASH,  N_DLR,   N_PIPE,  N_TILD,  N_GRAVE
 #define SYM_RIGHT_01 N_EXKL,  N_LT,    N_GT,    N_EQ,    N_AMP
 #define SYM_RIGHT_02 N_QUES,  N_LPARN, N_RPARN, N_MINS,  N_COLN
-#define SYM_RIGHT_03 N_PLUS,  N_PERC,  N_QUOT,  N_SING,  N_DEGRE
+#define SYM_RIGHT_03 N_PLUS,  N_PERC,  N_QUOT,  N_SING,  N_SEMI
 
     /*
      * ┌───┬───┬───┬───┬───┐		┌───┬───┬───┬───┬───┐
@@ -75,18 +75,26 @@
 
     /*
      * ┌───┬───┬───┬───┬───┐		┌───┬───┬───┬───┬───┐
-     * │F1 │F2 │F3 │F4 │   │		│   │   │   │   │   │
+     * │F1 │F2 │F3 │F4 │QWE│		│   │   │   │   │   │
      * ├───┼───┼───┼───┼───┤		├───┼───┼───┼───┼───┤
-     * │F5 │F6 │F7 │F8 │   │		│   │   │   │   │   │
+     * │F5 │F6 │F7 │F8 │NEO│		│   │   │   │   │   │
      * ├───┼───┼───┼───┼───┤		├───┼───┼───┼───┼───┤
-     * │F9 │F10|F11│F12│   │		│   │   │   │   │   │
+     * │F9 │F10|F11│F12│NUM│		│   │   │   │   │   │
      * └───┴───┴───┴───┴───┘		└───┴───┴───┴───┴───┘
      */
-#define FUN_LEFT_01  KC_F1,   KC_F2,   KC_F3,   KC_F4,          KC_ASDN // wieder raus
-#define FUN_LEFT_02  KC_F5,   KC_F6,   KC_F7,   KC_F8,          KC_ASUP // wieder raus
-#define FUN_LEFT_03  KC_F9,   KC_F10,  KC_F11,  KC_F12,         KC_ASRP // wieder raus
+#define FUN_LEFT_01  KC_F1,   KC_F2,   KC_F3,   KC_F4,          DF(QTZ)
+#define FUN_LEFT_02  KC_F5,   KC_F6,   KC_F7,   KC_F8,          DF(NEO)
+#define FUN_LEFT_03  KC_F9,   KC_F10,  KC_F11,  KC_F12,         DF(NUM)
 #define FUN_RIGHT_01  _______,	_______, _______,   _______,   _______
 #define FUN_RIGHT_02  _______,	_______, _______,   _______,   _______
 #define FUN_RIGHT_03  _______,	_______, _______,   _______,   _______
+
+
+#define MOS_LEFT_01  RGB_MODE_FORWARD,    RGB_HUI,   RGB_SAI,   RGB_VAI, BL_TOGG
+#define MOS_LEFT_02  RGB_MODE_REVERSE,    RGB_HUD,   RGB_SAD,   RGB_VAD, BL_STEP
+#define MOS_LEFT_03  _______,      _______,    _______,    _______,  RGB_TOG
+#define MOS_RIGHT_01  _______,	_______, _______,   _______,   _______
+#define MOS_RIGHT_02  _______,	_______, _______,   _______,   _______
+#define MOS_RIGHT_03  _______,	_______, _______,   _______,   _______
 
 #endif

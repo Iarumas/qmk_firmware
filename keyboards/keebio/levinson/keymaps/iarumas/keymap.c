@@ -8,6 +8,7 @@ enum my_keycodes {
   SYM,
   NUM,
   FUN,
+  MOS,
   QTZ
 };
 
@@ -21,14 +22,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { \
     * ├─────┼─────┼─────┼─────┼─────┼─────┤ ├─────┼─────┼─────┼─────┼─────┼─────┤
     * │SH_( │     │     │     │     │     │ │     │     │     │     │     │SH_) │
     * ├─────┼─────┼─────┼─────┼─────┼─────┤ ├─────┼─────┼─────┼─────┼─────┼─────┤
-    * │CTRL │ GUI │ ALT │     |S_FUN│S_NUM│ │S_NUM│S_FUN│     │     │     │     │
+    * │CTRL │ GUI │ ALT │T_MOS|S_FUN│S_NUM│ │S_NUM│S_FUN│T_MOS│     │     │     │
     * └─────┴─────┴─────┴─────┴─────┴─────┘ └─────┴─────┴─────┴─────┴─────┴─────┘
     */
 [NEO] = LAYOUT_levinson_wrapper( \
   KC_ESC,                 NEO_LEFT_01,                                 NEO_RIGHT_01,                 N_SS, \
   MO(SYM),                NEO_LEFT_02,                                 NEO_RIGHT_02,                 LT(SYM,KC_Z), \
   KC_LSPO,                NEO_LEFT_03,                                 NEO_RIGHT_03,                 KC_RSPC, \
-  KC_LCTRL, KC_LGUI, KC_LALT, KC_SPC, LT(FUN,KC_SPC), LT(NUM,KC_SPC), LT(NUM,KC_SPC), LT(FUN,KC_SPC), KC_SPC,  KC_RALT, KC_RGUI, KC_RCTRL \
+  KC_LCTRL, KC_LGUI, KC_LALT, TG(MOS), LT(FUN,KC_SPC), LT(NUM,KC_SPC), LT(NUM,KC_SPC), LT(FUN,KC_SPC), TG(MOS),  KC_RALT, KC_RGUI, KC_RCTRL \
 ),
 
 
@@ -85,6 +86,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { \
   _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______, _______ \
 ),
 
+[MOS] = LAYOUT_levinson_wrapper( \
+  _______,      MOS_LEFT_01,                   MOS_RIGHT_01,      _______, \
+  _______,      MOS_LEFT_02,                   MOS_RIGHT_02,      _______, \
+  _______,      MOS_LEFT_03,                   MOS_RIGHT_03,      _______, \
+  _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______, _______ \
+),
 
 [QTZ] = LAYOUT_levinson_wrapper( \
   _______,      QTZ_LEFT_01,                   QTZ_RIGHT_01,      _______, \
