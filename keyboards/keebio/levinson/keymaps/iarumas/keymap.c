@@ -1,15 +1,14 @@
 #include QMK_KEYBOARD_H
-#include "neo2-layout.h"
-
-#define LAYOUT_levinson_wrapper(...) LAYOUT_ortho_4x12(__VA_ARGS__)
+#include "iarumas.h"
 
 enum my_keycodes {
-  NEO = 0,
-  SYM,
-  NUM,
-  FUN,
-  MOS,
-  QTZ
+  _NEO = 0,
+  _SYM,
+  _NUM,
+  _FUN,
+  _MOS,
+  _QTZ,
+  _GAM
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { \
@@ -25,11 +24,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { \
     * │CTRL │ GUI │ ALT │T_MOS|S_FUN│S_NUM│ │S_NUM│S_FUN│T_MOS│     │     │     │
     * └─────┴─────┴─────┴─────┴─────┴─────┘ └─────┴─────┴─────┴─────┴─────┴─────┘
     */
-[NEO] = LAYOUT_levinson_wrapper( \
+[_NEO] = LAYOUT_levinson_wrapper( \
   KC_ESC,                 NEO_LEFT_01,                                 NEO_RIGHT_01,                 N_SS, \
-  MO(SYM),                NEO_LEFT_02,                                 NEO_RIGHT_02,                 LT(SYM,KC_Z), \
-  KC_LSPO,                NEO_LEFT_03,                                 NEO_RIGHT_03,                 KC_RSPC, \
-  KC_LCTRL, KC_LGUI, KC_LALT, TT(MOS), LT(FUN,KC_SPC), LT(NUM,KC_SPC), LT(NUM,KC_SPC), LT(FUN,KC_SPC), TT(MOS),  KC_RALT, KC_RGUI, KC_RCTRL \
+  MO(_SYM),               NEO_LEFT_02,                                 NEO_RIGHT_02,                 LT(_SYM,KC_Z), \
+  KC_LSFT,                NEO_LEFT_03,                                 NEO_RIGHT_03,                 KC_RSFT, \
+  KC_LCTRL, KC_LGUI, KC_LALT, TT(_MOS), LT(_FUN,KC_SPC), LT(_NUM,KC_SPC), LT(_NUM,KC_SPC), LT(_FUN,KC_SPC), TT(_MOS),  KC_RALT, KC_RGUI, KC_RCTRL \
 ),
 
 
@@ -43,7 +42,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { \
     * │     │     │     │     |     │     │ │     │     │     │     │     │     │
     * └─────┴─────┴─────┴─────┴─────┴─────┘ └─────┴─────┴─────┴─────┴─────┴─────┘
     */
-[SYM] = LAYOUT_levinson_wrapper( \
+[_SYM] = LAYOUT_levinson_wrapper( \
   _______,      SYM_LEFT_01,                   SYM_RIGHT_01,      _______, \
   _______,      SYM_LEFT_02,                   SYM_RIGHT_02,      N_AT, \
   _______,      SYM_LEFT_03,                   SYM_RIGHT_03,      _______, \
@@ -61,11 +60,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { \
     * │     │     │     │     |     │     │ │     │  0  │     │     │     │     │
     * └─────┴─────┴─────┴─────┴─────┴─────┘ └─────┴─────┴─────┴─────┴─────┴─────┘
     */
-[NUM] = LAYOUT_levinson_wrapper( \
+[_NUM] = LAYOUT_levinson_wrapper( \
   _______,      NUM_LEFT_01,                   NUM_RIGHT_01,      _______, \
   _______,      NUM_LEFT_02,                   NUM_RIGHT_02,      _______, \
   _______,      NUM_LEFT_03,                   NUM_RIGHT_03,      _______, \
-  _______, _______, _______, _______, _______, _______,   _______, KC_KP_0, _______, _______, _______, _______ \
+  _______, _______, _______, _______, _______, _______,   _______, KC_0, _______, _______, _______, _______ \
 ),
 
 
@@ -79,25 +78,43 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { \
     * │     │     │     │     |     │     │ │     │     │     │     │     │     │
     * └─────┴─────┴─────┴─────┴─────┴─────┘ └─────┴─────┴─────┴─────┴─────┴─────┘
     */
-[FUN] = LAYOUT_levinson_wrapper( \
+[_FUN] = LAYOUT_levinson_wrapper( \
   _______,      FUN_LEFT_01,                   FUN_RIGHT_01,      _______, \
   _______,      FUN_LEFT_02,                   FUN_RIGHT_02,      _______, \
   _______,      FUN_LEFT_03,                   FUN_RIGHT_03,      _______, \
   _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______, _______ \
 ),
 
-[MOS] = LAYOUT_levinson_wrapper( \
+[_MOS] = LAYOUT_levinson_wrapper( \
   _______,      MOS_LEFT_01,                   MOS_RIGHT_01,      _______, \
   _______,      MOS_LEFT_02,                   MOS_RIGHT_02,      _______, \
   _______,      MOS_LEFT_03,                   MOS_RIGHT_03,      _______, \
   _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______, _______ \
 ),
 
-[QTZ] = LAYOUT_levinson_wrapper( \
+[_QTZ] = LAYOUT_levinson_wrapper( \
   _______,      QTZ_LEFT_01,                   QTZ_RIGHT_01,      _______, \
   _______,      QTZ_LEFT_02,                   QTZ_RIGHT_02,      _______, \
   _______,      QTZ_LEFT_03,                   QTZ_RIGHT_03,      _______, \
   _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______, _______ \
 ),
 
+[_GAM] = LAYOUT_levinson_wrapper( \
+  _______,      QTZ_LEFT_01,                   QTZ_RIGHT_01,      _______, \
+  _______,      QTZ_LEFT_02,                   QTZ_RIGHT_02,      _______, \
+  _______,      QTZ_LEFT_03,                   QTZ_RIGHT_03,      _______, \
+  _______, _______, _______, _______, _______, _______, _______,  _______, _______, _______, _______, _______ \
+),
 };
+
+layer_state_t layer_state_set_user(layer_state_t state) {
+    switch (get_highest_layer(state)) {
+        case _GAM:
+            autoshift_disable();
+            break;
+        default:
+            autoshift_enable();
+            break;
+    }
+    return state;
+}

@@ -25,7 +25,13 @@
   #define RGBLIGHT_HUE_STEP 8
   #define RGBLIGHT_SAT_STEP 8
   #define RGBLIGHT_VAL_STEP 8
+  #define RGBLIGHT_LIMIT_VAL 150
 #endif
+
+//* Auto Shift Config
+#define AUTO_SHIFT_TIMEOUT 140
+#define NO_AUTO_SHIFT_SPECIAL
+#define NO_AUTO_SHIFT_NUMERIC
 
 // If you are using an Elite C rev3 on the slave side, uncomment the lines below:
 // #define SPLIT_USB_DETECT

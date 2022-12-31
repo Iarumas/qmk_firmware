@@ -82,7 +82,7 @@
      * │F9 │F10|F11│F12│NUM│		│   │   │   │   │   │
      * └───┴───┴───┴───┴───┘		└───┴───┴───┴───┴───┘
      */
-#define FUN_LEFT_01  KC_F1,   KC_F2,   KC_F3,   KC_F4,          DF(_QTZ)
+#define FUN_LEFT_01  KC_F1,   KC_F2,   KC_F3,   KC_F4,          DF(_GAM)
 #define FUN_LEFT_02  KC_F5,   KC_F6,   KC_F7,   KC_F8,          DF(_NEO)
 #define FUN_LEFT_03  KC_F9,   KC_F10,  KC_F11,  KC_F12,         DF(_NUM)
 #define FUN_RIGHT_01  _______,	_______, _______,   _______,   _______
@@ -107,3 +107,6 @@
 #define MOS_RIGHT_03  KC_ACL2,	KC_BTN1, KC_BTN3,   KC_BTN2,   _______
 
 #endif
+
+#define LAYOUT_levinson_wrapper(...) LAYOUT_ortho_4x12(__VA_ARGS__)
+#define LAYOUT_wrapper(...) LAYOUT(__VA_ARGS__)
