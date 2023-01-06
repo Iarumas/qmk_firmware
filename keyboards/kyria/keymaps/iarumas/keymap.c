@@ -36,21 +36,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|                              |------+------+------+------+------+--------|
  * |Ctrl/BS |   A  |   S  |  D   |   F  |   G  |                              |   H  |   J  |   K  |   L  | ;  : |  ' "   |
  * |--------+------+------+------+------+------+-------------.  ,-------------+------+------+------+------+------+--------|
- * | LShift |   Z  |   X  |   C  |   V  |   B  | _MOS |      |  |      | _MOS |   N  |   M  | ,  < | . >  | /  ? |  - _   |
+ * | LShift |   Z  |   X  |   C  |   V  |   B  | GUI  | CTRL |  | CTRL | GUI |   N  |   M  | ,  < | . >  | /  ? |  - _   |
  * `----------------------+------+------+------+------+------|  |------+------+------+------+------+----------------------'
- *                        | Ctrl | GUI  | Alt  | Space| Space|  | Space| Space| Alt  | GUI  | Ctrl |
+ *                        |      | _MOS | Alt  | Space| Space|  | Space| Space| Alt  | _MOS |      |
  *                        |      |      | Alt  | _FUN | _NUM |  | _NUM | _FUN |      |      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
     [_NEO] = LAYOUT_wrapper(
       KC_ESC,               NEO_LEFT_01,                                         NEO_RIGHT_01,                            N_SS, \
       MO(_SYM),             NEO_LEFT_02,                                         NEO_RIGHT_02,                            LT(_SYM,KC_Z), \
-      KC_LSFT,              NEO_LEFT_03,    TT(_MOS), _______,  _______, TT(_MOS), NEO_RIGHT_03,                            KC_RSFT, \
-   KC_LCTRL, KC_LGUI, KC_LALT, LT(_FUN,KC_SPC), LT(_NUM,KC_SPC), LT(_NUM,KC_SPC), LT(_FUN,KC_SPC), KC_RALT, KC_RGUI, KC_RCTRL \
+      KC_LSFT,              NEO_LEFT_03,    KC_LGUI, KC_LCTRL,  KC_RCTRL, KC_RGUI, NEO_RIGHT_03,                            KC_RSFT, \
+   _______, TT(_MOS), KC_LALT, LT(_FUN,KC_SPC), LT(_NUM,KC_SPC), LT(_NUM,KC_SPC), LT(_FUN,KC_SPC), KC_RALT, TT(_MOS), _______ \
    ),
 
     [_SYM] = LAYOUT_wrapper(
-      _______,               SYM_LEFT_01,                                           SYM_RIGHT_01,                            _______, \
+      _______,               SYM_LEFT_01,                                           SYM_RIGHT_01,                            N_EURO, \
       _______,               SYM_LEFT_02,                                           SYM_RIGHT_02,                            N_AT, \
       _______,               SYM_LEFT_03,    _______, _______,    _______, _______, SYM_RIGHT_03,                            _______, \
                     _______, _______, _______, _______, _______,  _______, _______, _______, _______, _______ \

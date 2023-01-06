@@ -21,14 +21,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = { \
     * ├─────┼─────┼─────┼─────┼─────┼─────┤ ├─────┼─────┼─────┼─────┼─────┼─────┤
     * │SH_( │     │     │     │     │     │ │     │     │     │     │     │SH_) │
     * ├─────┼─────┼─────┼─────┼─────┼─────┤ ├─────┼─────┼─────┼─────┼─────┼─────┤
-    * │CTRL │ GUI │ ALT │T_MOS|S_FUN│S_NUM│ │S_NUM│S_FUN│T_MOS│     │     │     │
+    * │CTRL │ GUI │ ALT │T_MOS|S_NUM│S_FUN│ │S_FUN│S_NUM│T_MOS│     │     │     │
     * └─────┴─────┴─────┴─────┴─────┴─────┘ └─────┴─────┴─────┴─────┴─────┴─────┘
     */
 [_NEO] = LAYOUT_levinson_wrapper( \
   KC_ESC,                 NEO_LEFT_01,                                 NEO_RIGHT_01,                 N_SS, \
   MO(_SYM),               NEO_LEFT_02,                                 NEO_RIGHT_02,                 LT(_SYM,KC_Z), \
   KC_LSFT,                NEO_LEFT_03,                                 NEO_RIGHT_03,                 KC_RSFT, \
-  KC_LCTRL, KC_LGUI, KC_LALT, TT(_MOS), LT(_FUN,KC_SPC), LT(_NUM,KC_SPC), LT(_NUM,KC_SPC), LT(_FUN,KC_SPC), TT(_MOS),  KC_RALT, KC_RGUI, KC_RCTRL \
+  KC_LCTRL, KC_LGUI, KC_LALT, TT(_MOS), LT(_NUM,KC_SPC), LT(_FUN,KC_SPC), LT(_FUN,KC_SPC), LT(_NUM,KC_SPC), TT(_MOS),  KC_RALT, KC_RGUI, KC_RCTRL \
 ),
 
 
